@@ -1,3 +1,10 @@
+if(/Mobi|Android/i.test(navigator.userAgent)){
+    // user is on mobile
+    $("#level-title").text("Tap Screen to Start");
+} else {
+    // user is on desktop
+    $("#level-title").text("Press A Key to Start");
+}
 
 var buttonColours = ["red", "blue", "green", "yellow"]; 
 
@@ -7,6 +14,8 @@ var userClickedPattern=[];
 
 var started=false;
 var level=0;
+
+//// Desktop - listens for keyboard
 $(document).keydown(function(){
     if (started===false){
         $("#level-title").text("Level"+level);
@@ -14,6 +23,14 @@ $(document).keydown(function(){
         started=true;
     }
 })
+
+//// Mobile - listens for screen tap
+$(document).click(function(){
+    if(started === false){
+        nextSequence();
+        started = true;
+    }
+});
 
 
 $(".btn").click(function (){
