@@ -1,8 +1,6 @@
 if(/Mobi|Android/i.test(navigator.userAgent)){
-    // user is on mobile
     $("#level-title").text("Tap Screen to Start");
 } else {
-    // user is on desktop
     $("#level-title").text("Press A Key to Start");
 }
 
@@ -25,10 +23,12 @@ $(document).keydown(function(){
 })
 
 //// Mobile - listens for screen tap
-$(document).click(function(){
-    if(started === false){
-        nextSequence();
-        started = true;
+$(document).click(function(event){
+    if(!$(event.target).hasClass("btn")){
+        if(started === false){
+            nextSequence();
+            started = true;
+        }
     }
 });
 
