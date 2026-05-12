@@ -51,3 +51,13 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 15px;  /* smaller text on mobile */
+    }
+    .btn {
+        width: 120px;     /* smaller buttons on mobile */
+        height: 120px;
+    }
+}
