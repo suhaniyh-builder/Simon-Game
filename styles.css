@@ -52,6 +52,16 @@ body {
   background-color: grey;
 }
 
+
+
+p{
+    color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+      
+      
+
 @media (max-width: 600px) {
     h1 {
         font-size: 15px;  /* smaller text on mobile */
