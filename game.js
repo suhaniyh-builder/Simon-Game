@@ -98,8 +98,4 @@ function startOver(){
     started=false;
 }
 
-$("footer p").css({
-    "color": "antiquewhite",
-    "font-size": "20px",
-    "font-family": "'Press Start 2P', cursive"
-});
+
