@@ -70,4 +70,7 @@ p{
         width: 120px;     /* smaller buttons on mobile */
         height: 120px;
     }
+  p{ 
+    font-size: 15px
+  }
 }
